@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<!-- Mirrored from www.wesleylanzana.com.br/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Apr 2026 23:47:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Desenvolvimento Web, Processos e Integrações no Fluig. Portfólio técnico de Wesley Lanzana">
+    <meta name="author" content="Wesley Lanzana">
+    <script src="custom.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a class='logo' href='index.html'>Home</a>
+            <nav>
+                <ul>
+                    <li><a href='artigos.html'>Artigos</a></li>
+                    <li><a href='projetos.html'>Projetos</a></li>
+                    <li><a href='quemsoueu.html'>Quem sou eu</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <section class="hero-content">
+            <div class="hero-left">
+                <img src="imagens/tratado.jpg" alt="Wesley Lanzana">
+            </div>
+
+            <div class="hero-right">
+                <h1>Wesley Lanzana</h1>
+                <p class="subtitle">Desenvolvimento Web, Processos e Integrações Fluig</p>
+
+                <div class="hero-buttons">
+                    <a class='btn-primary' href='projetos.html'><i class="fa-solid fa-briefcase"></i>Projetos</a>
+                    <a class='btn-secondary' href='videos.html'><i class="fa-brands fa-youtube"></i>Vídeos</a>
+                    <a href="https://www.linkedin.com/in/wesley-lanzana-b6470397/" target="_blank"
+                        class="btn-secondary"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+                    <a href="https://github.com/wesleylanzana" target="_blank" class="btn-secondary"><i
+                            class="fa-brands fa-github"></i>Github</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <main>
+
+        <section>
+            <h2>Artigos Técnicos</h2>
+
+            <div class="cards-grid">
+                <a class='content-item' href='artigos/datasetfluig.html'>
+                    <h3>Como criar Dataset customizado no Fluig</h3>
+                    <p>Passo a passo prático para criação de dataset via JavaScript.</p>
+                </a>
+
+                <a class='content-item' href='./artigos/comoUtilizarAPIs.html'>
+                    <h3>Como consumir APIs no Fluig</h3>
+                    <p>Exemplo prático de integração externa utilizando ClientService.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="videos">
+            <h2>Vídeos</h2>
+            <div class="horizontal-card">
+                <a class='content-item' href='videos.html'>
+                    <h3>Como criar Dataset customizado no Fluig</h3>
+                    <p>Passo a passo prático para criação de dataset via JavaScript.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class='horizontal-card'>
+                <a class='content-item' href='projetos.html'>
+                    <h3>Como criar Dataset customizado no Fluig</h3>
+                    <p>Passo a passo prático para criação de dataset via JavaScript.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+
+            <div class="terminal-contact">
+                <p>
+                    <span class="terminal-label">email:</span>
+                    <span class="copy-email" onclick="copiarEmail()">
+                        wesley.lanzana@gmail.com <i class="fa-regular fa-copy"></i>
+                    </span>
+
+                </p>
+                <p><span class="terminal-label">github: </span>
+                    <a href="https://github.com/wesleylanzana" target="_blank">github.com/wesleylanzana</a>
+                </p>
+                <p><span class="terminal-label">linkedin:</span>
+                    <a href="https://www.linkedin.com/in/wesley-lanzana-b6470397/" target="_blank">
+                        linkedin.com/in/wesley-lanzana
+                    </a>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            <img src="favicon.png" alt="logo">
+        </p>
+        <p>@wesleylanzana</p>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+    
+    <div id="toast">✔ Email copiado!</div>
+</body>
+
+</html>

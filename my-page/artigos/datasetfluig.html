@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Desenvolvimento Web, Processos e Integrações no Fluig. Portfólio técnico de Wesley Lanzana.">
+    <meta name="author" content="Wesley Lanzana">
+    <script src="../custom.js" defer></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a class='logo' href='../index.html'>Wesley Lanzana</a>
+
+            <nav>
+                <ul>
+                    <li><a href='../artigos.html'>Artigos</a></li>
+                    <li><a href='../projetos.html'>Projetos</a></li>
+                    <li><a href='../videos.html'>Vídeos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="article-hero">
+
+            <div class="article-hero-content">
+                <span class="badge">Fluig • Iniciante</span>
+
+                <h1>Como criar Dataset customizado no Fluig</h1>
+
+                <p>
+                    Aprenda o básico para criar datasets e integrar dados dentro do Fluig.
+                </p>
+
+                <div class="article-meta">
+                    <span>📅 26 Fev 2026</span>
+                    <span>⏱ 5 min leitura</span>
+                </div>
+            </div>
+
+        </section>
+        <section>
+
+            <a class='back-link' href='../artigos.html'>← Voltar para artigos</a>
+
+            <h1>Como criar Dataset customizado no Fluig (Passo a passo)</h1>
+
+            <p class="article-intro">
+                Neste guia você vai aprender como criar um dataset customizado no Fluig utilizando JavaScript.
+                Esse tipo de dataset é essencial para integrações, automações e manipulação de dados dentro do produto.
+            </p>
+
+            <h2>1. O que é um Dataset no Fluig?</h2>
+            <p>
+                Dataset é uma estrutura utilizada no Fluig para integrar dados externos ou internos ao produto, permitindo o
+                consumo dessas informações em formulários, widgets e integrações com outros sistemas.
+
+                Uma forma simples de entender é imaginar uma tabela: você define os cabeçalhos das colunas e depois
+                preenche as linhas com os dados. Assim, fica mais fácil visualizar como um dataset organiza e armazena
+                as informações dentro da plataforma.
+            </p>
+
+            <h2>2. Quando usar um Dataset customizado?</h2>
+            <p>
+                Você deve utilizar datasets customizados quando precisar:
+            </p>
+
+            <ul>
+                <li>Integrar o Fluig com APIs externas</li>
+                <li>Manipular dados dinamicamente</li>
+                <li>Criar consultas personalizadas</li>
+                <li>Centralizar regras de negócio</li>
+            </ul>
+
+            <h2>3. Estrutura básica</h2>
+
+            <p>
+                Todo dataset no Fluig segue uma estrutura padrão. Abaixo está um exemplo simples:
+            </p>
+
+            <div class="code-block">
+
+                <button class="copy-btn" onclick="copiarCodigo(this)">
+                    <i class="fa-regular fa-copy"></i> Copiar
+                </button>
+
+                <pre>
+function createDataset(fields, constraints, sortFields) {
+
+    var dataset = DatasetBuilder.newDataset();
+
+    dataset.addColumn("coluna1");
+    dataset.addRow(["valor1"]);
+
+    return dataset;
+}
+</pre>
+
+            </div>
+
+            <p>
+                Vamos entender o que cada parte faz:
+            </p>
+
+            <ul class="code-explanation">
+                <li><strong>createDataset:</strong> função principal executada pelo Fluig</li>
+                <li><strong>DatasetBuilder.newDataset():</strong> cria um novo dataset</li>
+                <li><strong>addColumn:</strong> define as colunas</li>
+                <li><strong>addRow:</strong> adiciona dados ao dataset</li>
+                <li><strong>return dataset:</strong> retorna o resultado final</li>
+            </ul>
+
+            <div class="code-block">
+
+                <button class="copy-btn" onclick="copiarCodigo(this)">
+                    <i class="fa-regular fa-copy"></i> Copiar
+                </button>
+
+            </div>
+
+            <h2>4. Erros comuns</h2>
+
+            <ul>
+                <li>Esquecer de retornar o dataset</li>
+                <li>Erro de sintaxe no JavaScript</li>
+                <li>Não validar constraints corretamente</li>
+                <li>Falta de tratamento de erro</li>
+            </ul>
+
+            <h2>5. Boas práticas</h2>
+            <ul>
+                <li>Utilizar try/catch para evitar falhas</li>
+                <li>Evitar loops desnecessários</li>
+                <li>Registrar logs com log.info()</li>
+                <li>Documentar integrações externas</li>
+            </ul>
+
+            <h2>Conclusão</h2>
+
+            <p>
+                Criar datasets customizados no Fluig é uma habilidade essencial para qualquer desenvolvedor da plataforma. A manipulação e integração de dados fazem parte de praticamente qualquer sistema, então entender e codificar esse tipo de solução precisa se tornar algo natural no dia a dia.
+
+Com esse conhecimento, você consegue integrar sistemas, manipular dados com mais segurança e construir soluções mais robustas.
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <img src="../favicon.png" alt="logo">
+        </p>
+        <p>@wesleylanzana</p>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+
+    <div id="toast">✔ Email copiado!</div>
+
+</body>
+
+</html>

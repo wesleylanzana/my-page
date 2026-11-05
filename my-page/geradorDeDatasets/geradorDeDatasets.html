@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerador de datasets Fluig">
+    <meta name="author" content="Wesley Lanzana">
+    <title>Gerador de Datasets | Wesley Lanzana</title>
+
+    <script src="../custom.js" defer></script>
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a class="logo" href="../index.html">Wesley Lanzana</a>
+
+            <nav>
+                <ul>
+                    <li><a href="../artigos.html">Artigos</a></li>
+                    <li><a href="../projetos.html">Projetos</a></li>
+                    <li><a href="../videos.html">Vídeos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="article-hero">
+
+            <div class="article-hero-content">
+
+                <span class="badge">Ferramenta gratuita • TOTVS Fluig</span>
+
+                <h1>Gerador de Datasets Fluig</h1>
+
+                <p>
+                    Gere uma estrutura-base de dataset para o TOTVS Fluig,
+                    incluindo constraints, integrações com serviços e tratamento de erros.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTEÚDO -->
+        <section class="article-content">
+
+            <a class="back-link" href="../index.html">← Voltar para Home</a>
+
+            <div id="step1" class="content-item">
+                <h2>Configure seu dataset</h2>
+
+                <p>
+                    Informe as características do dataset que deseja gerar.
+                    Nas próximas etapas, configuraremos as colunas, constraints,
+                    serviços e tratamento de erros.
+                </p>
+
+                <div class="form-group">
+                    <label for="datasetName">Nome do dataset</label>
+                    <input type="text" id="datasetName" name="datasetName" class="form-control"
+                        placeholder="Ex.: dsConsultaSolicitantes">
+                </div>
+
+                <div class="form-group">
+                    <label for="datasetType">Tipo de dataset</label>
+                    <select id="datasetType" name="datasetType" class="form-control">
+                        <option value="">Selecione uma opção</option>
+                        <option value="simple">Simples</option>
+                        <option value="integration">Integração com serviço</option>
+                    </select>
+                </div>
+
+                <button type="button" id="nextStep" class="btn">
+                    Próxima etapa →
+                </button>
+            </div>
+
+            <!-- ETAPA 1: CONFIGURAÇÃO INICIAL -->
+            <div class="content-item">
+                <!-- Seu formulário atual permanece aqui -->
+            </div>
+
+            <h3>Colunas de retorno</h3>
+
+            <div id="columnsContainer"></div>
+
+            <button type="button" id="addColumn" class="btn">
+                + Adicionar coluna
+            </button>
+
+        </section>
+
+        <!-- ETAPA 2: COLUNAS E CONSTRAINTS -->
+        <div id="step2" class="content-item" hidden>
+
+            <h2>Estrutura do dataset</h2>
+
+            <p>
+                Defina as colunas de retorno e os campos utilizados
+                para filtrar os registros.
+            </p>
+
+            <h3>Colunas de retorno</h3>
+
+            <div id="columnsContainer"></div>
+
+            <button type="button" id="addColumn" class="btn">
+                + Adicionar coluna
+            </button>
+
+            <h3>Constraints</h3>
+
+            <div id="constraintsContainer"></div>
+
+            <button type="button" id="addConstraint" class="btn">
+                + Adicionar constraint
+            </button>
+
+            <div>
+                <button type="button" id="backStep1" class="btn">
+                    ← Voltar
+                </button>
+
+                <button type="button" id="nextStep2" class="btn">
+                    Próxima etapa →
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            <img src="../favicon.png" alt="logo">
+        </p>
+        <p>@wesleylanzana</p>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+
+    <div id="toast">✔ Email copiado!</div>
+
+</body>
+
+</html>

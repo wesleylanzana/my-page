@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Desenvolvimento Web, Processos e Integrações no Fluig. Portfólio técnico de Wesley Lanzana.">
+    <meta name="author" content="Wesley Lanzana">
+
+    <script src="custom.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a class="logo" href="index.html">Wesley Lanzana</a>
+
+            <nav>
+                <ul>
+                    <li><a href="artigos.html">Artigos</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="videos.html">Vídeos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO PADRÃO -->
+        <section class="article-hero">
+            <div class="article-hero-content">
+
+                <span class="badge">Conteúdo Técnico</span>
+
+                <h1>Artigos Técnicos</h1>
+
+                <p>
+                    Conteúdos práticos sobre Fluig, integrações e desenvolvimento real.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- CONTEÚDO -->
+        <section class="article-content">
+
+            <a class="back-link" href="index.html">← Voltar para Home</a>
+
+            <div class="article-levels">
+                <a href="#iniciante">Iniciante</a>
+                <a href="#intermediario">Intermediário</a>
+                <a href="#avancado">Avançado</a>
+            </div>
+
+            <!-- INICIANTE -->
+            <section id="iniciante">
+                <h2>Iniciante</h2>
+
+                <div class="cards-grid">
+                    <a class="content-item" href="artigos/datasetfluig.html">
+                        <h3>Como criar Dataset customizado no Fluig</h3>
+                        <p>
+                            Aprenda o básico para criar datasets e integrar dados dentro do Fluig.
+                        </p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- INTERMEDIÁRIO -->
+            <section id="intermediario">
+                <h2>Intermediário</h2>
+
+                <div class="cards-grid">
+                    <a class="content-item" href="./artigos/comoUtilizarAPIs.html">
+                        <h3>Como utilizar APIs REST e SOAP no Fluig</h3>
+                        <p>
+                            Integre sistemas externos ao Fluig de forma prática e dinâmica.
+                        </p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- AVANÇADO -->
+            <section id="avancado">
+                <h2>Avançado</h2>
+
+                <div class="cards-grid">
+                    <p style="opacity:0.6;">Conteúdos avançados em breve...</p>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            <img src="favicon.png" alt="logo">
+        </p>
+        <p>@wesleylanzana</p>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+
+    <div id="toast">✔ Email copiado!</div>
+
+</body>
+
+</html>

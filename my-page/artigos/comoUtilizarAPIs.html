@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aprenda a consumir APIs REST e SOAP no Fluig. Integrações práticas para o dia a dia.">
+    <meta name="author" content="Wesley Lanzana">
+    <script src="../custom.js" defer></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+    <link rel="shortcut icon" href="../favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a class="logo" href="../index.html">Wesley Lanzana</a>
+
+            <nav>
+                <ul>
+                    <li><a href="../artigos.html">Artigos</a></li>
+                    <li><a href="../projetos.html">Projetos</a></li>
+                    <li><a href="../videos.html">Vídeos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="article-hero">
+            <div class="article-hero-content">
+
+                <span class="badge">Fluig • Intermediário</span>
+
+                <h1>Como consumir APIs no Fluig (REST e SOAP)</h1>
+
+                <p>
+                    Aprenda a integrar sistemas externos no Fluig utilizando APIs REST e SOAP
+                    de forma prática e aplicada ao dia a dia.
+                </p>
+
+                <div class="article-meta">
+                    <span>📅 26 Fev 2026</span>
+                    <span>⏱ 8 min leitura</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTEÚDO -->
+        <section class="article-content">
+
+            <a class="back-link" href="../artigos.html">← Voltar para artigos</a>
+
+            <p class="article-intro">
+                Neste guia você vai aprender como consumir APIs no Fluig utilizando REST e SOAP.
+                Esse tipo de integração é essencial para conectar o Fluig com outros sistemas e automatizar processos.
+            </p>
+
+            <h2>1. O que são APIs no contexto do Fluig?</h2>
+            <p>
+                APIs permitem que o Fluig se comunique com sistemas externos, enviando e recebendo dados.
+                Essa comunicação é fundamental para integrações com ERPs, CRMs e outros serviços.
+            </p>
+
+            <h2>2. REST vs SOAP: quando usar?</h2>
+            <ul>
+                <li><strong>REST:</strong> mais leve, usa JSON e é o mais comum hoje, exemplo Protheus</li>
+                <li><strong>SOAP:</strong> mais estruturado, usa XML e é comum em sistemas legados, exemplo RM</li>
+            </ul>
+
+            <h2>3. Como o Fluig consome APIs?</h2>
+            <p>
+                No Fluig, integrações são feitas geralmente utilizando o <strong>ClientService</strong>,
+                disponível em datasets e eventos.
+            </p>
+
+            <h2>4. Exemplo de consumo REST</h2>
+
+            <div class="code-block">
+                <button class="copy-btn" onclick="copiarCodigo(this)">
+                    <i class="fa-regular fa-copy"></i> Copiar
+                </button>
+
+<pre>
+var clientService = fluigAPI.getAuthorizeClientService();
+
+var data = {
+    companyId: getValue("WKCompany"),
+    serviceCode: "nome_do_servico",
+    endpoint: "/api/exemplo",
+    method: "get",
+    timeoutService: "100"
+};
+
+var response = clientService.invoke(JSON.stringify(data));
+</pre>
+            </div>
+
+            <h2>5. Exemplo de consumo SOAP</h2>
+
+            <div class="code-block">
+                <button class="copy-btn" onclick="copiarCodigo(this)">
+                    <i class="fa-regular fa-copy"></i> Copiar
+                </button>
+
+<pre>
+var clientService = fluigAPI.getAuthorizeClientService();
+
+var data = {
+    companyId: getValue("WKCompany"),
+    serviceCode: "servico_soap",
+    endpoint: "",
+    method: "post",
+    params: "<soapenv:Envelope>...</soapenv:Envelope>"
+};
+
+var response = clientService.invoke(JSON.stringify(data));
+</pre>
+            </div>
+
+            <h2>6. Erros comuns</h2>
+            <ul>
+                <li>Configurar errado o serviço no Fluig</li>
+                <li>Problemas de autenticação</li>
+                <li>Timeout de requisição</li>
+                <li>Erro no formato JSON/XML</li>
+            </ul>
+
+            <h2>7. Boas práticas</h2>
+            <ul>
+                <li>Centralizar integrações em datasets</li>
+                <li>Tratar erros com try/catch</li>
+                <li>Logar respostas para debug</li>
+                <li>Evitar chamadas desnecessárias</li>
+            </ul>
+
+            <h2>Conclusão</h2>
+            <p>
+                Saber consumir APIs no Fluig é essencial para criar soluções integradas e escaláveis.
+                Dominar REST e SOAP permite trabalhar com qualquer tipo de sistema externo.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            <img src="../favicon.png" alt="logo">
+        </p>
+        <p>@wesleylanzana</p>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+
+    <div id="toast">✔ Código copiado!</div>
+
+</body>
+
+</html>
